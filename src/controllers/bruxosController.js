@@ -94,7 +94,7 @@ const createBruxo = (req, res) => {
         especialidade
     }
 
-        const bruxoExiste = bruxos.find(b => b.nome === novoBruxo);
+        const bruxoExiste = bruxos.find(b => b.nome === novoBruxo.nome);
         if (bruxoExiste) {
             res.status(409).json({
                 success: false,
